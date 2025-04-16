@@ -1,0 +1,10 @@
+# Created by venv; see https://docs.python.org/3/library/venv.html
+ats-env/
+# Python virtual environment
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.log
+*.csv
+*.pdf

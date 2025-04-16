@@ -28,8 +28,7 @@ def clean_text(text):
 
 def learn_job_keywords(df, top_n=10):
     """
-    Learn and return a dictionary mapping each job title (in lowercase) to its top 'n' keywords,
-    as extracted using TF-IDF after filtering out generic words.
+    return a dictionary mapping each job title (lowercase) to its top 'n' keywords
     """
     learned_keywords = {}
     job_groups = df.groupby('JOB TITLE')
@@ -247,7 +246,7 @@ def pdf_to_text(pdf_path):
 
 def process_dataset(csv_file, top_n_keywords=10):
     """
-    Process the CSV dataset, learn job-specific keywords, and compute ATS scores for all resumes.
+    learn job-specific keywords, and compute ATS scores for all resumes from csv dataset.
     """
     df = pd.read_csv(csv_file)
     if 'JOB TITLE' not in df.columns or 'RESUME TEXT' not in df.columns:
@@ -268,7 +267,7 @@ def process_dataset(csv_file, top_n_keywords=10):
     df['IMPROVEMENT SUGGESTIONS'] = suggestions_list
     return df, learned_keywords
 
-#           Main               #
+#Main#
 
 if __name__ == "__main__":
     import argparse

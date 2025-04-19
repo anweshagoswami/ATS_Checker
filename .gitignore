@@ -1,18 +1,11 @@
-# Ignore Python virtual environments
-ats-env/
-venv/
-env/
-
-# Bytecode and cache
 __pycache__/
 *.pyc
-*.pyo
-
-# Ignore logs, datasets, and test files
-*.log
-*.csv
+*.pkl
 *.pdf
-
-# VSCode and system files
-.vscode/
+.env
+venv/
+ats-env/
 *.DS_Store
+*.egg-info/
+.idea/
+*.log

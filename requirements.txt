@@ -1,0 +1,6 @@
+Flask
+sentence-transformers
+scikit-learn
+pandas
+numpy
+pdfminer.six

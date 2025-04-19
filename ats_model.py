@@ -247,7 +247,7 @@ def pdf_to_text(pdf_path):
 
 def process_dataset(csv_file, top_n_keywords=10):
     """
-    Process the CSV dataset, learn job-specific keywords, and compute ATS scores for all resumes.
+    learn job-specific keywords, and compute ATS scores for all resumes from csv dataset.
     """
     df = pd.read_csv(csv_file)
     if 'JOB TITLE' not in df.columns or 'RESUME TEXT' not in df.columns:
@@ -268,7 +268,7 @@ def process_dataset(csv_file, top_n_keywords=10):
     df['IMPROVEMENT SUGGESTIONS'] = suggestions_list
     return df, learned_keywords
 
-#           Main               #
+#Main#
 
 if __name__ == "__main__":
     import argparse

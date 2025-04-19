@@ -5,9 +5,12 @@ import pickle
 import tempfile
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from ats_model import calculate_ats_score, pdf_to_text
 
 app = Flask(__name__)
+CORS(app, origins=["http://localhost:5173"])
+
 
 # 1) Point this to the pickle you created above:
 MODEL_PATH = os.environ.get("ATS_KEYWORDS_PATH", "learned_keywords.pkl")

@@ -28,8 +28,7 @@ def clean_text(text):
 
 def learn_job_keywords(df, top_n=10):
     """
-    Learn and return a dictionary mapping each job title (in lowercase) to its top 'n' keywords,
-    as extracted using TF-IDF after filtering out generic words.
+    return a dictionary mapping each job title (lowercase) to its top 'n' keywords
     """
     learned_keywords = {}
     job_groups = df.groupby('JOB TITLE')
